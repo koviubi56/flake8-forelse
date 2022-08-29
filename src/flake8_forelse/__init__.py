@@ -81,7 +81,7 @@ class ForElsePlugin:
     def __init__(self, tree: ast.AST) -> None:
         self._tree = tree
 
-    def run(self):
+    def run(self) -> typing.Generator[Flake8ASTErrorInfo, None, None]:
         errors: typing.List[Flake8ASTErrorInfo] = []
 
         for_visitor = ForElseVisitor()
