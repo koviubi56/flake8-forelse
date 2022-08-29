@@ -114,8 +114,6 @@ In order to determine whether you are dealing with a security issue, ask yoursel
 
 If the answer to either of those two questions are "yes", then you're probably dealing with a security issue. _Note that even if you answer "no" to both questions, you may still be dealing with a security issue._
 
-<!-- TODO: Is this good? -->
-
 How to report them can be found in the [SECURITY.md](SECURITY.md) file.
 
 ## DCO
