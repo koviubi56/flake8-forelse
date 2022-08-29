@@ -12,8 +12,6 @@ setup(
     maintainer_email="koviubi56@duck.com",
     url="https://github.com/koviubi56/flake8-forelse",
     download_url="https://github.com/koviubi56/flake8-forelse/releases",
-    packages=["flake8_forelse"],
-    py_modules=["flake8_forelse"],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Environment :: Plugins",
