@@ -65,14 +65,6 @@ repos:
     rev: v1.4.0
     hooks:
       - id: yesqa
-  - repo: https://github.com/regebro/pyroma
-    rev: "4.0"
-    hooks:
-      - id: pyroma
-  - repo: https://github.com/PyCQA/prospector
-    rev: 1.7.7
-    hooks:
-      - id: prospector
   - repo: https://github.com/pycqa/isort
     rev: 5.10.1
     hooks:
