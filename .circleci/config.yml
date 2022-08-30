@@ -41,11 +41,6 @@ jobs:
             pip install -U yesqa
             yesqa
       - run:
-          name: Run pyroma
-          command: |
-            pip install -U pyroma
-            pyroma .
-      - run:
           name: Run autoflake
           command: |
             pip install -U autoflake
