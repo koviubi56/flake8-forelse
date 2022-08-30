@@ -1,4 +1,23 @@
+import pathlib
+
 from setuptools import setup
+
+
+def dunder_file() -> pathlib.Path:
+    try:
+        return pathlib.Path(__file__).resolve()
+    except Exception:
+        try:
+            raise ValueError
+        except ValueError as exc:
+            return pathlib.Path(
+                exc.__traceback__.tb_frame.f_code.co_filename
+            ).resolve()
+
+
+readme = (pathlib.Path(dunder_file()) / ".." / "README.md").read_text(
+    encoding="utf-8"
+)
 
 setup(
     name="flake8_forelse",
@@ -6,6 +25,7 @@ setup(
     description=(
         "A Flake8 plugin which checks the use of for-else and while-else"
     ),
+    long_description=readme,
     author="Koviubi56",
     author_email="koviubi56@duck.com",
     maintainer="Koviubi56",
