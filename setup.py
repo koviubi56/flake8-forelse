@@ -26,6 +26,7 @@ setup(
         "A Flake8 plugin which checks the use of for-else and while-else"
     ),
     long_description=readme,
+    long_description_content_type="text/markdown",
     author="Koviubi56",
     author_email="koviubi56@duck.com",
     maintainer="Koviubi56",
