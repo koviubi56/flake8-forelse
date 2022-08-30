@@ -15,8 +15,10 @@ def dunder_file() -> pathlib.Path:
             ).resolve()
 
 
-readme = (pathlib.Path(dunder_file()) / ".." / "README.md").read_text(
-    encoding="utf-8"
+readme = (
+    (pathlib.Path(dunder_file()) / ".." / "README.md")
+    .resolve()
+    .read_text(encoding="utf-8")
 )
 
 setup(
