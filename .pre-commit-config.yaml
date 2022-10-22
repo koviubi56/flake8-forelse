@@ -47,7 +47,7 @@ repos:
           ]
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.0.0
+    rev: v3.1.0
     hooks:
       - id: pyupgrade
         args: ["--py38-plus"]
@@ -58,7 +58,7 @@ repos:
         files: ^src/
         args: ["--strict"]
   - repo: https://github.com/asottile/setup-cfg-fmt
-    rev: v2.0.0
+    rev: v2.1.0
     hooks:
       - id: setup-cfg-fmt
         args: ["--include-version-classifiers"]
