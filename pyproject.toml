@@ -20,7 +20,7 @@ args = "--profile black {path}"
 
 [[tool.lemming.linters]]
 package = "flake8"
-args = "--count --exclude *venv* --show-source --statistics --extend-ignore=W503,S101  {path}"
+args = "--count --exclude *venv* --show-source --statistics --extend-ignore=W503,S101 --extend-exclude=example.py {path}"
 also_install = ["flake8-bandit"]
 
 [[tool.lemming.linters]]

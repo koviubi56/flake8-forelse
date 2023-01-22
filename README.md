@@ -3,8 +3,6 @@
 [![Hits-of-Code](https://hitsofcode.com/github/koviubi56/flake8-forelse?branch=main)](https://hitsofcode.com/github/koviubi56/flake8-forelse/view?branch=main)
 ![Codacy grade](https://img.shields.io/codacy/grade/42424fcd258a44f3a0303ca6ca535f67)
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/koviubi56/flake8-forelse)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/koviubi56/flake8-forelse/main.svg)](https://results.pre-commit.ci/latest/github/koviubi56/flake8-forelse/main)
-![CircleCI](https://img.shields.io/circleci/build/github/koviubi56/flake8-forelse)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![semantic-release](https://img.shields.io/badge/%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)
 ![GitHub](https://img.shields.io/github/license/koviubi56/flake8-forelse)
