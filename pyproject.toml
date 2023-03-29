@@ -2,27 +2,50 @@
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
-[[tool.lemming.formatters]]
-package = "black"
-args = "-l 79 {path}"
+[tool.isort]
+profile = "black"
 
-[[tool.lemming.formatters]]
-package = "setup_cfg_fmt"
-args = "--include-version-classifiers"
-
-[[tool.lemming.formatters]]
-package = "yesqa"
-# args = "{path}"
-
-[[tool.lemming.formatters]]
-package = "isort"
-args = "--profile black {path}"
+[tool.ruff]
+select = ["ALL"]
+ignore = [
+    "ANN101",
+    "ANN102",
+    "COM812",
+    "D",
+    "EM102",
+    "FBT",
+    "G004",
+    "PGH003",
+    "PLR2004",
+    "RUF100",
+    "TCH002",
+    "TRY003",
+    "TRY400",
+]
+line-length = 79
+target-version = "py38"
 
 [[tool.lemming.linters]]
-package = "flake8"
-args = "--count --exclude *venv* --show-source --statistics --extend-ignore=W503,S101 --extend-exclude=example.py {path}"
-also_install = ["flake8-bandit"]
+packages = ["ruff"]
+command = "{pyexe} -m ruff check . --show-source"
+run_first = true
+
+[[tool.lemming.formatters]]
+packages = ["black"]
+format_command = "{pyexe} -m black -l 79 {path}"
+check_command = "{pyexe} -m black -l 79 --check --extend-exclude .*venv.* {path}"
+
+[[tool.lemming.formatters]]
+packages = ["setup_cfg_fmt"]
+format_command = "{pyexe} -m setup_cfg_fmt --include-version-classifiers"
+# no check
+
+[[tool.lemming.formatters]]
+packages = ["isort"]
+format_command = "{pyexe} -m isort --profile black {path}"
+check_command = "{pyexe} -m isort --profile black -c {path}"
 
 [[tool.lemming.linters]]
-package = "pyroma"
-args = "{path}"
+packages = ["pyroma"]
+command = "{pyexe} -m pyroma {path}"
+
