@@ -44,7 +44,7 @@ class ForElseVisitor(ast.NodeVisitor):
     def __init__(self) -> None:
         self.errors: typing.List[Flake8ASTErrorInfo] = []
 
-    def visit_For(self, node: ast.For) -> None:
+    def visit_For(self, node: ast.For) -> None:  # noqa: N802
         if node.orelse:
             self.errors.append(
                 Flake8ASTErrorInfo(
@@ -61,7 +61,7 @@ class WhileElseVisitor(ast.NodeVisitor):
     def __init__(self) -> None:
         self.errors: typing.List[Flake8ASTErrorInfo] = []
 
-    def visit_While(self, node: ast.While) -> None:
+    def visit_While(self, node: ast.While) -> None:  # noqa: N802
         if node.orelse:
             self.errors.append(
                 Flake8ASTErrorInfo(

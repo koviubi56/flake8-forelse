@@ -24,6 +24,7 @@ ignore = [
 ]
 line-length = 79
 target-version = "py38"
+extend-exclude = ["example.py"]
 
 [[tool.lemming.linters]]
 packages = ["ruff"]
@@ -48,4 +49,3 @@ check_command = "{pyexe} -m isort --profile black -c {path}"
 [[tool.lemming.linters]]
 packages = ["pyroma"]
 command = "{pyexe} -m pyroma {path}"
-
