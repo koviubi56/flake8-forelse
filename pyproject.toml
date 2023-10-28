@@ -8,29 +8,58 @@ profile = "black"
 [tool.ruff]
 select = ["ALL"]
 ignore = ["ANN101", "COM", "D", "FA100"]
+fixable = [
+    "F632",
+    "E711",
+    "F901",
+    "E703",
+    "E712",
+    "E713",
+    "E714",
+    "W291",
+    "W292",
+    "W293",
+    "I001",
+    "PT001",
+    "PT003",
+    "PT006",
+    "PT009",
+    "PT023",
+    "Q",
+    "RSE102",
+    "SIM101",
+    "SIM103",
+    "SIM109",
+    "SIM112",
+    "SIM117",
+    "SIM118",
+    "SIM201",
+    "SIM202",
+    "SIM208",
+    "SIM210",
+    "SIM211",
+    "SIM212",
+]
 line-length = 79
 target-version = "py38"
 extend-exclude = ["example.py"]
 
-[[tool.lemming.linters]]
+[[tool.lemming.formatters]]
 packages = ["ruff"]
-command = "{pyexe} -m ruff check . --show-source"
+format_command = "{pyexe} -m ruff check --fix {path} --show-source"
+check_command = "{pyexe} -m ruff check {path} --show-source"
 run_first = true
 
 [[tool.lemming.formatters]]
-packages = ["black"]
-format_command = "{pyexe} -m black -l 79 {path}"
-check_command = "{pyexe} -m black -l 79 --check --extend-exclude .*venv.* {path}"
+packages = ["ruff"]
+format_command = "{pyexe} -m ruff format {path}"
+check_command = "{pyexe} -m ruff format --check {path}"
+run_first = true
 
 [[tool.lemming.formatters]]
 packages = ["setup_cfg_fmt"]
 format_command = "{pyexe} -m setup_cfg_fmt --include-version-classifiers"
 # no check
-
-[[tool.lemming.formatters]]
-packages = ["isort"]
-format_command = "{pyexe} -m isort --profile black {path}"
-check_command = "{pyexe} -m isort --profile black -c {path}"
 
 [[tool.lemming.linters]]
 packages = ["pyroma"]
