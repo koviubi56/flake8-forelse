@@ -1,4 +1,4 @@
-# flake8-forelse
+# DEPRECATED - flake8-forelse
 
 [![Hits-of-Code](https://hitsofcode.com/github/koviubi56/flake8-forelse?branch=main)](https://hitsofcode.com/github/koviubi56/flake8-forelse/view?branch=main)
 ![Codacy grade](https://img.shields.io/codacy/grade/42424fcd258a44f3a0303ca6ca535f67)
@@ -51,6 +51,7 @@ Feature requests and bug reports should be reported in the [Issues tab](https://
 Security vulnerabilities should be reported as described in our [Security policy](https://github.com/koviubi56/flake8-forelse/security/policy) (the [SECURITY.md](SECURITY.md) file).
 
 ## Contributing
+
 [Pull requests](https://github.com/koviubi56/flake8-forelse/blob/main/CONTRIBUTING.md#pull-requests) are welcome. For major changes, please [open an issue first](https://github.com/koviubi56/flake8-forelse/issues/new/choose) to discuss what you would like to change.
 
 Please make sure to add entries to [the changelog](CHANGELOG.md).
@@ -62,4 +63,5 @@ For more information, please read the [contributing guidelines](CONTRIBUTING.md)
 A list of nice people who helped this project can be found in the [CONTRIBUTORS file](CONTRIBUTORS).
 
 ## License
+
 [GNU GPLv3+](LICENSE)
